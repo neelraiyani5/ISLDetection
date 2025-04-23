@@ -11,7 +11,7 @@ if not cap.isOpened():
 detector = HandDetector(maxHands=2)  # Changed to maxHands=2 to detect up to two handsS
 offset = 20
 imgSize = 300
-folder = "dataset/Z"  # Updated folder name for Indian Sign Language
+folder = "dataset/R"  # Updated folder name for Indian Sign Language
 counter = 0
 
 while True:
@@ -93,7 +93,7 @@ while True:
     cv2.imshow("Image", img)
     key = cv2.waitKey(1)
 
-    if key == ord("3"):
+    if key == ord("z"):
         counter += 1
         # Save with indication of how many hands were used
         hands_count = len(hands) if hands else 0
